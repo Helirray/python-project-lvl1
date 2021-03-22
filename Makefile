@@ -15,3 +15,6 @@ package-install:
 
 make lint:
 	@poetry run flake8 brain_games
+
+test-coverage:
+	poetry run pytest --cov=hexlet_python_package --cov-report xml tests
