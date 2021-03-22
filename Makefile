@@ -17,10 +17,10 @@ lint:
 	@poetry run flake8 brain_games
 
 test-coverage:
-	@poetry run pytest --cov=hexlet_python_package --cov-report xml tests
+	@poetry run pytest --cov=brain_games --cov-report xml tests
 
 test:
-	@poetry run pytest hexlet_python_package tests
+	@poetry run pytest brain_games tests
 
 selfcheck:
 	@poetry check
