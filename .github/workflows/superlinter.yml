@@ -1,5 +1,6 @@
 name: Python CI
 
+# Run this workflow every time a new commit pushed to your repository
 on:
   - push
   - pull_request
@@ -9,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # we want to test our package on several versions of Python
         python-version: [3.6, 3.7, 3.8]
     steps:
       - uses: actions/checkout@v2
@@ -20,11 +20,8 @@ jobs:
         # make depends on poetry
       - name: Install dependencies
         run: |
-          pip install poetry
-          make install
-      - name: Run linter and pytest
-        run: |
-          make lint
+          make check
+      # Runs the Super-Linter action
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v2.7.4
         env:
