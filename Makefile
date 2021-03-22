@@ -18,3 +18,13 @@ lint:
 
 test-coverage:
 	@poetry run pytest --cov=hexlet_python_package --cov-report xml tests
+
+test:
+	@poetry run pytest hexlet_python_package tests
+
+selfcheck:
+	@poetry check
+
+check: selfcheck test lint
+
+.PHONY: install test lint selfcheck check build
