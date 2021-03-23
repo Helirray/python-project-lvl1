@@ -8,4 +8,6 @@ https://asciinema.org/a/1e5UeejoiLBbZuss08OqI9uHN - brain-even
 
 https://asciinema.org/a/Qpn03ciNugwFjjfJPbMtdbNCc - brain-calc
 
+https://asciinema.org/a/S3qR9QAsgLJMXbqDVmM2XuG95 - brain-gcd
+
 [![Actions Status](https://github.com/Helirray/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Helirray/python-project-lvl1/actions)
