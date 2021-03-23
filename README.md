@@ -10,4 +10,6 @@ https://asciinema.org/a/Qpn03ciNugwFjjfJPbMtdbNCc - brain-calc
 
 https://asciinema.org/a/S3qR9QAsgLJMXbqDVmM2XuG95 - brain-gcd
 
+https://asciinema.org/a/skbfXg32OFpzF9vpt6VS0BzKT8 - brain-progression
+
 [![Actions Status](https://github.com/Helirray/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Helirray/python-project-lvl1/actions)
