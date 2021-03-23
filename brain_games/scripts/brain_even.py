@@ -1,5 +1,6 @@
-from games.engine import welcome_user_and_get_user_name, congratulate_user
-from games.even_game import check_even
+from brain_games.games.engine\
+    import welcome_user_and_get_user_name, congratulate_user
+from brain_games.games.even_game import check_even
 
 
 def main():
