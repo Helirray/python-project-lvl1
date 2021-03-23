@@ -50,5 +50,20 @@ def check_answer(user_answer, correct_answer, user_name):
         return False
 
 
+def generate_progression():
+    start = randint(1, 100)
+    step = randint(2, 10)
+    length = randint(5, 10)
+    progression = [start] + [0] * (length - 1)
+    for i in range(1, length):
+        progression[i] = progression[i - 1] + step
+    deleted_digit_number = randint(0, len(progression) - 1)
+    correct_answer = progression[deleted_digit_number]
+    progression[deleted_digit_number] = '..'
+    progression = ' '.join(map(str, progression))
+    print(f'Question: {progression}')
+    return correct_answer
+
+
 def congratulate_user(user_name):
     print(f'Congratulations, {user_name}!')
