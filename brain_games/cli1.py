@@ -26,10 +26,11 @@ def check_even(user_name):
             print('Correct!')
             count += 1
         elif is_even(number) and answer != 'yes':
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes' \nLet's try again, {user_name}!")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes' \n"
+                  f"Let's try again, {user_name}!")
             count = 0
         elif is_even(number) is False and answer != 'no':
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no' \nLet's try again, {user_name}!")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no' \n"
+                  f"Let's try again, {user_name}!")
             count = 0
     print(f'Congratulations, {user_name}!')
-
