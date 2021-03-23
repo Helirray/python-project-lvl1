@@ -26,5 +26,29 @@ def calculate_random_numbers():
     return expression
 
 
+def generate_gcd():
+    num_1 = randint(1, 100)
+    num_2 = randint(1, 100)
+    print(f'Question: {num_1} {num_2}')
+    while num_1 != 0 and num_2 != 0:
+        if num_1 > num_2:
+            num_1 %= num_2
+        else:
+            num_2 %= num_1
+    return num_1 + num_2
+
+
+def check_answer(user_answer, correct_answer, user_name):
+    if user_answer == str(correct_answer):
+        print(f'Your answer: {user_answer}\nCorrect!')
+        return True
+    else:
+        print(f'Your answer: {user_answer}\n'
+              f"'{user_answer}' is wrong answer ;(. "
+              f"Correct answer was '{correct_answer}'.\n"
+              f"Let's try again, {user_name}!")
+        return False
+
+
 def congratulate_user(user_name):
     print(f'Congratulations, {user_name}!')
