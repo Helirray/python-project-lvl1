@@ -4,4 +4,6 @@
 
 <img src="https://github.com/Helirray/python-project-lvl1/actions/workflows/superlinter.yml/badge.svg" /></a>
 
+https://asciinema.org/a/1e5UeejoiLBbZuss08OqI9uHN
+
 [![Actions Status](https://github.com/Helirray/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Helirray/python-project-lvl1/actions)
