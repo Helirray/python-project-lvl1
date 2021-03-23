@@ -1,7 +1,7 @@
 from brain_games.games.calc_game\
     import check_calculatings
 from brain_games.games.engine\
-    import congratulate_user, welcome_user_and_get_user_name
+    import welcome_user_and_get_user_name
 
 
 def main():
