@@ -10,4 +10,4 @@ def check_gcd(user_name):
         if check_answer(answer, correct_answer, user_name):
             count += 1
         else:
-            count = 0
+            return
