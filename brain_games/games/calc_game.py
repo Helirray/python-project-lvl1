@@ -1,4 +1,5 @@
-from brain_games.games.engine import calculate_random_numbers, congratulate_user
+from brain_games.games.engine \
+    import calculate_random_numbers, congratulate_user, check_answer
 
 
 def check_calculatings(user_name):
@@ -7,12 +8,8 @@ def check_calculatings(user_name):
     while count < 3:
         correct_answer = calculate_random_numbers()
         answer = input()
-        if answer == str(correct_answer):
-            print(f'Your answer: {answer}\nCorrect!')
+        if check_answer(answer, correct_answer, user_name):
             count += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'.\n"
-                  f"Let's try again, {user_name}!")
             return
     congratulate_user(user_name)
