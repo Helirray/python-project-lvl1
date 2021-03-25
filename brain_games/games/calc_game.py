@@ -1,15 +1,15 @@
-from brain_games.games.engine \
-    import calculate_random_numbers, congratulate_user, check_answer
+from random import randint, choice
+
+START_GAME_MESSAGE = 'What is the result of the expression?'
 
 
-def check_calculatings(user_name):
-    print('What is the result of the expression?')
-    count = 0
-    while count < 3:
-        correct_answer = calculate_random_numbers()
-        answer = input()
-        if check_answer(answer, correct_answer, user_name):
-            count += 1
-        else:
-            return
-    congratulate_user(user_name)
+def generate_game_values():
+    num_1 = randint(1, 100)
+    num_2 = randint(1, 100)
+    expression = choice((num_1 + num_2, num_1 * num_2, num_1 - num_2))
+    if expression == num_1 + num_2:
+        return f'{num_1} + {num_2}', expression
+    elif expression == num_1 * num_2:
+        return f'{num_1} * {num_2}', expression
+    elif expression == num_1 - num_2:
+        return f'{num_1} - {num_2}', expression
