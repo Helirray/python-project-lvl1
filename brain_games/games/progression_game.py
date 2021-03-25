@@ -1,13 +1,17 @@
-from brain_games.games.engine import generate_progression, check_answer
+from random import randint
+
+START_GAME_MESSAGE = 'What number is missing in the progression?'
 
 
-def check_number_of_progression(user_name):
-    print('What number is missing in the progression?')
-    count = 0
-    while count < 3:
-        correct_answer = generate_progression()
-        answer = input()
-        if check_answer(answer, correct_answer, user_name):
-            count += 1
-        else:
-            return
+def generate_game_values():
+    start = randint(1, 100)
+    step = randint(2, 10)
+    length = randint(5, 10)
+    progression = [start] + [0] * (length - 1)
+    for i in range(1, length):
+        progression[i] = progression[i - 1] + step
+    deleted_digit_number = randint(0, len(progression) - 1)
+    correct_answer = progression[deleted_digit_number]
+    progression[deleted_digit_number] = '..'
+    progression = ' '.join(map(str, progression))
+    return f'Question: {progression}', correct_answer
