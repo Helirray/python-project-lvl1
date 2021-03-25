@@ -1,16 +1,18 @@
-from brain_games.games.engine import is_prime, check_answer
 from random import randint
 
+START_GAME_MESSAGE = 'Answer "yes" if given number is prime.' \
+                     ' Otherwise answer "no".'
 
-def check_prime(user_name):
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    count = 0
-    while count < 3:
-        num = randint(2, 200)
-        print(f'Question: {num}')
-        correct_answer = 'yes' if is_prime(num) else 'no'
-        answer = input()
-        if check_answer(answer, correct_answer, user_name):
-            count += 1
-        else:
-            return
+
+def is_prime(num):
+    i = 2
+    while i < num:
+        if num % i == 0:
+            return False
+        i += 1
+    return True
+
+
+def generate_game_values():
+    num = randint(2, 200)
+    return num, 'yes' if is_prime(num) else 'no'

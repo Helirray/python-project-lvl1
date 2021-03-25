@@ -1,13 +1,9 @@
-from brain_games.games.prime_game\
-    import check_prime
-from brain_games.games.engine\
-    import welcome_user_and_get_user_name, congratulate_user
+from brain_games.games.engine import engine
+from brain_games.games import prime_game
 
 
 def main():
-    user_name = welcome_user_and_get_user_name()
-    check_prime(user_name)
-    congratulate_user(user_name)
+    engine(prime_game)
 
 
 if __name__ == '__main__':
