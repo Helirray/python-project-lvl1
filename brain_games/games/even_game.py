@@ -11,5 +11,3 @@ def generate_game_values():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     number = randint(1, 100)
     return number, 'yes' if is_even(number) else 'no'
-
-
