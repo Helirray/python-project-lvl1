@@ -21,12 +21,3 @@ def engine(game):
                   f"Let's try again, {user_name}!")
             return
     print(f'Congratulations, {user_name}!')
-
-
-def is_prime(num):
-    i = 2
-    while i < num:
-        if num % i == 0:
-            return False
-        i += 1
-    return True
