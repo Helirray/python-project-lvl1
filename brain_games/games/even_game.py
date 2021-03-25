@@ -1,16 +1,15 @@
-from brain_games.games.engine import is_even, check_answer
 from random import randint
 
+START_GAME_MESSAGE = 'What is the result of the expression?'
 
-def check_even(user_name):
+
+def is_even(num):
+    return num % 2 == 0
+
+
+def generate_game_values():
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    count = 0
-    while count < 3:
-        number = randint(1, 100)
-        print(f'Question: {number}')
-        answer = input()
-        correct_answer = 'yes' if is_even(number) else 'no'
-        if check_answer(answer, correct_answer, user_name):
-            count += 1
-        else:
-            return
+    number = randint(1, 100)
+    return number, 'yes' if is_even(number) else 'no'
+
+
