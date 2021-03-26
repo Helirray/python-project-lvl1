@@ -9,4 +9,4 @@ def generate_game_values():
     add = (f'{num_1} + {num_2}', num_1 + num_2)
     sub = (f'{num_1} - {num_2}', num_1 - num_2)
     mul = (f'{num_1} * {num_2}', num_1 * num_2)
-    return choice(add, sub, mul)
+    return choice((add, sub, mul))
