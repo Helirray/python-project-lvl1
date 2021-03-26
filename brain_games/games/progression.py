@@ -12,4 +12,4 @@ def generate_game_values():
     correct_answer = progression[deleted_digit_number]
     progression[deleted_digit_number] = '..'
     progression = ' '.join(map(str, progression))
-    return f'Question: {progression}', correct_answer
+    return progression, correct_answer

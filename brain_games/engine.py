@@ -15,8 +15,7 @@ def engine(game):
             print('Correct!')
             rounds_count += 1
         else:
-            print(f'Your answer: {user_answer}\n'
-                  f"'{user_answer}' is wrong answer ;(. "
+            print(f"'{user_answer}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'.\n"
                   f"Let's try again, {user_name}!")
             return
