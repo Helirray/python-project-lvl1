@@ -7,10 +7,8 @@ def generate_game_values():
     start = randint(1, 100)
     step = randint(2, 10)
     length = randint(5, 10)
-    progression = [start] + [0] * (length - 1)
-    for i in range(1, length):
-        progression[i] = progression[i - 1] + step
-    deleted_digit_number = randint(0, len(progression) - 1)
+    progression = [start + step * i for i in range(length)]
+    deleted_digit_number = randint(0, length - 1)
     correct_answer = progression[deleted_digit_number]
     progression[deleted_digit_number] = '..'
     progression = ' '.join(map(str, progression))

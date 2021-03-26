@@ -10,9 +10,9 @@ def engine(game):
     while rounds_count < 3:
         question, correct_answer = game.generate_game_values()
         print(f'Question: {question}')
-        user_answer = input()
+        user_answer = prompt.string('Your answer: ')
         if user_answer == str(correct_answer):
-            print(f'Your answer: {user_answer}\nCorrect!')
+            print('Correct!')
             rounds_count += 1
         else:
             print(f'Your answer: {user_answer}\n'

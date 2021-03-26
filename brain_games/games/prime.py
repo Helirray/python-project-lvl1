@@ -6,7 +6,9 @@ START_GAME_MESSAGE = 'Answer "yes" if given number is prime.' \
 
 def is_prime(num):
     i = 2
-    while i < num:
+    if num < 2:
+        return False
+    while i < num / 2:
         if num % i == 0:
             return False
         i += 1
