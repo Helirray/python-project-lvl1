@@ -1,7 +1,9 @@
 from random import randint
 
-START_GAME_MESSAGE = 'Answer "yes" if given number is prime.' \
-                     ' Otherwise answer "no".'
+START_GAME_MESSAGE = (
+    'Answer "yes" if given number is prime.'
+    ' Otherwise answer "no".'
+)
 
 
 def is_prime(num):
